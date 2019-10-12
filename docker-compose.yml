@@ -8,3 +8,9 @@ services:
     volumes:
       - "./:/workdir"
     working_dir: "/workdir"
+  db:
+    environment:
+      MYSQL_ROOT_PASSWORD: "my-secret-pw"
+    expose:
+      - "3306"
+    image: "mariadb:10.4.8"
