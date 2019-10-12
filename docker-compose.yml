@@ -1,0 +1,16 @@
+version: "3"
+services:
+  app:
+    build: "./"
+    command: "tail -f /dev/null"
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./:/workdir"
+    working_dir: "/workdir"
+  db:
+    environment:
+      MYSQL_ROOT_PASSWORD: "my-secret-pw"
+    expose:
+      - "3306"
+    image: "mariadb:10.4.8"
