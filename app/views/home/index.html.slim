@@ -6,3 +6,11 @@ div.uk-position-cover
       p
         | ywt を書く日記。
     div.uk-flex-1.uk-text-center
+      = link_to(new_user_registration_path,
+          class: 'uk-button uk-button-large uk-button-secondary uk-margin-left uk-margin-right') do
+        span.uk-icon.uk-margin-small-right[uk-icon='icon: pencil']
+        | 新規登録
+      = link_to(new_user_session_path,
+          class: 'uk-button uk-button-large uk-button-primary uk-margin-left uk-margin-right') do
+        span.uk-icon.uk-margin-small-right[uk-icon='icon: sign-in']
+        | サインイン
