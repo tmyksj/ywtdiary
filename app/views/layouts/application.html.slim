@@ -13,7 +13,11 @@ html
         nav.uk-navbar-container.uk-navbar-transparent[uk-navbar]
           div.uk-navbar-left
             div.uk-navbar-nav
-              = link_to('ywtdiary', root_path, class: 'uk-logo uk-navbar-item')
+              h1.uk-margin-remove
+                - if user_signed_in?
+                  = link_to('ywtdiary', dashboard_path, class: 'uk-logo uk-navbar-item')
+                - else
+                  = link_to('ywtdiary', root_path, class: 'uk-logo uk-navbar-item')
           - if user_signed_in?
             div.uk-navbar-right
               div.uk-navbar-nav
