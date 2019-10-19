@@ -29,13 +29,13 @@ module Ywtdiary
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
-    # Use Slim
+    # Use Slim.
     config.generators.template_engine = :slim
 
     # Don't generate system test files.
     config.generators.system_tests = nil
 
-    # Don't generate field_with_errors
+    # Don't generate field_with_errors.
     config.action_view.field_error_proc = Proc.new do |html_tag, instance|
       html_tag
     end
