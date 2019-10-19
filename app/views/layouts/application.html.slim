@@ -5,7 +5,21 @@ html
       | Ywtdiary
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag('application', media: 'all', 'data-turbolinks-track': 'reload')
+    = javascript_pack_tag('application', 'data-turbolinks-track': 'reload')
   body
-    = yield
+    header
+      div.uk-container.uk-container-expand
+        nav.uk-navbar-container.uk-navbar-transparent
+          div.uk-navbar-left
+            div.uk-navbar-nav
+              = link_to('ywtdiary', root_path, class: 'uk-logo uk-navbar-item')
+    main[uk-height-viewport='expand: true']
+      = yield
+    footer
+      div.uk-container.uk-container-expand
+        div.uk-padding-small.uk-text-right
+          span.uk-text-muted.uk-text-small
+            | (c)&nbsp;
+            = Time.zone.now.year
+            | &nbsp;ywtdiary

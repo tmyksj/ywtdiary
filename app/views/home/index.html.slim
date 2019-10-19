@@ -1,2 +1,16 @@
-h1 Home#index
-p Find me in app/views/home/index.html.slim
+div.uk-position-cover
+  div.uk-flex.uk-flex-middle.uk-height-1-1
+    div.uk-flex-1.uk-text-center
+      h1
+        | ywtdiary
+      p.uk-margin-remove
+        | ywt を書く日記。
+    div.uk-flex-1.uk-text-center
+      = link_to(new_user_registration_path,
+          class: 'uk-button uk-button-large uk-button-secondary uk-margin-left uk-margin-right') do
+        span.uk-icon.uk-margin-small-right[uk-icon='icon: pencil']
+        | 新規登録
+      = link_to(new_user_session_path,
+          class: 'uk-button uk-button-large uk-button-primary uk-margin-left uk-margin-right') do
+        span.uk-icon.uk-margin-small-right[uk-icon='icon: sign-in']
+        | サインイン
