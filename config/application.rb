@@ -34,5 +34,10 @@ module Ywtdiary
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Don't generate field_with_errors
+    config.action_view.field_error_proc = Proc.new do |html_tag, instance|
+      html_tag
+    end
   end
 end
