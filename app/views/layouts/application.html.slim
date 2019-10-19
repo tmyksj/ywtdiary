@@ -10,10 +10,16 @@ html
   body
     header
       div.uk-container.uk-container-expand
-        nav.uk-navbar-container.uk-navbar-transparent
+        nav.uk-navbar-container.uk-navbar-transparent[uk-navbar]
           div.uk-navbar-left
             div.uk-navbar-nav
               = link_to('ywtdiary', root_path, class: 'uk-logo uk-navbar-item')
+          - if user_signed_in?
+            div.uk-navbar-right
+              div.uk-navbar-nav
+                = link_to(destroy_user_session_path, class: 'uk-button uk-button-default', method: :delete) do
+                  span.uk-icon.uk-margin-small-right[uk-icon='icon: sign-out']
+                  | サインアウト
     main[uk-height-viewport='expand: true']
       = yield
     footer

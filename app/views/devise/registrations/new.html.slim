@@ -1,0 +1,30 @@
+div.uk-container
+  div.uk-flex.uk-flex-center
+    div.uk-flex-none
+      h2.uk-margin-xlarge-top
+        | 新規登録
+      = form_with(class: 'uk-form-horizontal',
+          local: true,
+          model: resource,
+          url: registration_path(resource_name)) do |f|
+        div.uk-margin
+          = f.label(:email, class: 'uk-form-label')
+          div.uk-form-controls
+            div.uk-inline
+              span.uk-form-icon[uk-icon='icon: mail']
+              = f.email_field(:email, autofocus: true, autocomplete: 'email', class: 'uk-input')
+        div.uk-margin
+          = f.label(:password, class: 'uk-form-label')
+          div.uk-form-controls
+            div.uk-inline
+              span.uk-form-icon[uk-icon='icon: lock']
+              = f.password_field(:password, autocomplete: 'new-password', class: 'uk-input')
+        div.uk-margin
+          = f.label(:password_confirmation, class: 'uk-form-label')
+          div.uk-form-controls
+            div.uk-inline
+              span.uk-form-icon[uk-icon='icon: lock']
+              = f.password_field(:password_confirmation, autocomplete: 'new-password', class: 'uk-input')
+        div.uk-margin
+          div.uk-text-right
+            = f.submit('登録', class: 'uk-button uk-button-secondary')
