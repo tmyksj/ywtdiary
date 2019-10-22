@@ -1,8 +1,7 @@
 div.uk-container
   h2.uk-margin-xlarge-top
     | ywt の記録
-  = form_with(local: true,
-      model: @ywt) do |f|
+  = form_with(local: true, model: @ywt) do |f|
     div.uk-flex.uk-flex-bottom.uk-flex-center
       div.uk-flex-1.uk-margin-small-bottom.uk-margin-small-left.uk-margin-small-right.uk-margin-small-top
         = f.label(:y, class: 'uk-form-label')
