@@ -1,2 +1,8 @@
-h1 Ywts#new
-p Find me in app/views/ywts/new.html.slim
+= form_with(model: @ywt) do |f|
+  = f.label(:y)
+  = f.text_area(:y)
+  = f.label(:w)
+  = f.text_area(:w)
+  = f.label(:t)
+  = f.text_area(:t)
+  = f.submit
