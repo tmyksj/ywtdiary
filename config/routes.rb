@@ -6,6 +6,6 @@ Rails.application.routes.draw do
 
   get('dashboard', to: 'dashboard#index')
   scope(:dashboard) do
-    resources(:ywts, only: [:new, :create])
+    resources(:ywts, only: [:index, :new, :create])
   end
 end

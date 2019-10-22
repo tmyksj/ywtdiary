@@ -1,0 +1,31 @@
+div.uk-container
+  h2.uk-margin-xlarge-top
+    | これまでの ywt
+  table.uk-table.uk-table-middle
+    thead
+      tr
+        th.uk-width-1-4
+          | 記録日
+        th.uk-width-1-4
+          | やったこと
+        th.uk-width-1-4
+          | わかったこと
+        th.uk-width-1-4
+          | 次やること
+    tbody
+      - @ywts.each do |ywt|
+        tr
+          td
+            = ywt.created_at
+          td
+            div.uk-form-controls
+              textarea.uk-height-small.uk-textarea.uk-width-1-1[aria-label='y' readonly]
+                = ywt.y
+          td
+            div.uk-form-controls
+              textarea.uk-height-small.uk-textarea.uk-width-1-1[aria-label='w' readonly]
+                = ywt.w
+          td
+            div.uk-form-controls
+              textarea.uk-height-small.uk-textarea.uk-width-1-1[aria-label='t' readonly]
+                = ywt.t
