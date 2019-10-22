@@ -1,7 +1,7 @@
 class Ywt < ApplicationRecord
-  belongs_to :user
+  belongs_to(:user)
 
-  validates :y, presence: true, length: { maximum: 250 }
-  validates :w, presence: true, length: { maximum: 250 }
-  validates :t, presence: true, length: { maximum: 250 }
+  validates(:y, length: { maximum: 250 }, presence: true)
+  validates(:w, length: { maximum: 250 }, presence: true)
+  validates(:t, length: { maximum: 250 }, presence: true)
 end
