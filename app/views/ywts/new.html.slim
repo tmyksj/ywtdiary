@@ -1,0 +1,19 @@
+div.uk-container
+  h2.uk-margin-xlarge-top
+    | ywt の記録
+  = form_with(local: true, model: @ywt) do |f|
+    div.uk-flex.uk-flex-bottom.uk-flex-center
+      div.uk-flex-1.uk-margin-small-bottom.uk-margin-small-left.uk-margin-small-right.uk-margin-small-top
+        = f.label(:y, class: 'uk-form-label')
+        div.uk-form-controls
+          = f.text_area(:y, autofocus: true, class: 'uk-height-small uk-textarea uk-width-1-1')
+      div.uk-flex-1.uk-margin-small-bottom.uk-margin-small-left.uk-margin-small-right.uk-margin-small-top
+        = f.label(:w, class: 'uk-form-label')
+        div.uk-form-controls
+          = f.text_area(:w, class: 'uk-height-small uk-textarea uk-width-1-1')
+      div.uk-flex-1.uk-margin-small-bottom.uk-margin-small-left.uk-margin-small-right.uk-margin-small-top
+        = f.label(:t, class: 'uk-form-label')
+        div.uk-form-controls
+          = f.text_area(:t, class: 'uk-height-small uk-textarea uk-width-1-1')
+    div.uk-margin-small-right.uk-text-right
+      = f.submit('記録', class: 'uk-button uk-button-primary')
