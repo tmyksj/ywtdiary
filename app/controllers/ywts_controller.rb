@@ -1,5 +1,5 @@
 class YwtsController < ApplicationController
-  before_action :authenticate_user!
+  before_action(:authenticate_user!)
 
   def new
     @ywt = Ywt.new
@@ -10,7 +10,7 @@ class YwtsController < ApplicationController
     @ywt.user = current_user
 
     if @ywt.save
-      redirect_to(controller: :dashboard, action: :index)
+      redirect_to(action: :index, controller: :dashboard)
     else
       render(:new)
     end
