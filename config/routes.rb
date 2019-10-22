@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
   devise_for :users
+
   get 'dashboard', to: 'dashboard#index'
-  resources :ywts, only: :create
+  scope :dashboard do
+    resources :ywts, only: [:new, :create]
+  end
 end
