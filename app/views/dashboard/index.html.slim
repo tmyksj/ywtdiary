@@ -1,9 +1,18 @@
 div.uk-container.uk-container-expand
   div.uk-flex.uk-margin-xlarge-top
-    = link_to(new_ywt_path,
-        class: 'uk-card uk-card-body uk-card-default uk-card-hover uk-display-block uk-link-toggle uk-width-medium') do
-      h2.uk-card-title
-        span.uk-link-heading
-          | ywt の記録
-      p
-        | 今日の y: やったこと、 w: わかったこと、 t: 次やること を記録できます。
+    div.uk-margin-bottom.uk-margin-left.uk-margin-right.uk-margin-top
+      = link_to(new_ywt_path,
+          class: 'uk-card uk-card-body uk-card-default uk-card-hover uk-display-block uk-link-toggle uk-width-medium') do
+        h2.uk-card-title
+          span.uk-link-heading
+            | ywt の記録
+        p
+          | 今日の y: やったこと、 w: わかったこと、 t: 次やること を記録できます。
+    div.uk-margin-bottom.uk-margin-left.uk-margin-right.uk-margin-top
+      = link_to(ywts_path,
+          class: 'uk-card uk-card-body uk-card-default uk-card-hover uk-display-block uk-link-toggle uk-width-medium') do
+        h2.uk-card-title
+          span.uk-link-heading
+            | これまでの ywt
+        p
+          | これまでの y: やったこと、 w: わかったこと、 t: 次やること を確認できます。
