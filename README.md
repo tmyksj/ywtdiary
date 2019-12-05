@@ -6,8 +6,8 @@ ywt の記録ほかに、 ywt それぞれに書いたことをタグクラウ�
 ※ タグクラウド、ラベルの付与は開発中です。
 
 ## スクリーンショット
-- <img alt="ホーム" src="doc/assets/home#index.png">
-- <img alt="ywt 作成" src="doc/assets/ywts#new.png">
+- <img alt="ホーム" src="doc/assets/home%23index.png">
+- <img alt="ywt 作成" src="doc/assets/ywts%23new.png">
 
 ## 開発状況
 kanban @ projects を見てください。
