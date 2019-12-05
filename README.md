@@ -1,24 +1,18 @@
-# README
+# ywtdiary
+ywtdiary は、 y: やったこと、 w: わかったこと、 t: 次にやること、を記録できるツールです。
+ywt の記録ほかに、 ywt それぞれに書いたことをタグクラウドの形式確認できるほか、 ywt にラベルをつけることが可能です。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+※ ywt は、アジャイル開発でよく使われるふりかえりツールです。  
+※ タグクラウド、ラベルの付与は開発中です。
 
-Things you may want to cover:
+## スクリーンショット
+- <img alt="ホーム" src="doc/assets/home#index.png">
+- <img alt="ywt 作成" src="doc/assets/ywts#new.png">
 
-* Ruby version
+## 開発状況
+kanban @ projects を見てください。
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## for developers
+### 開発サーバの立ち上げ
+1. `docker-compose up` でコンテナを立ち上げます。
+2. `docker-compose exec app bundle exec rails s -b 0.0.0.0` で開発サーバを立ち上げます。
